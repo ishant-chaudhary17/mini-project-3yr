@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode tokens (default if no class is present, though we prefer dark as default) */
+    --ink-900: #F5F7FA;
+    --ink-800: #FFFFFF;
+    --ink-700: #EEF2F7;
+    --line: #DCE3EC;
+    --text-hi: #0F1822;
+    --text-lo: #5A6B80;
+    --signal: #0D9488;
+    --actor: #C77700;
+    --depth-2: #5B4BD6;
+    --depth-3: #D63E73;
+    --idle: #C3CCD8;
+  }
+
+  .dark {
+    /* Dark mode tokens */
+    --ink-900: #0A0E14;
+    --ink-800: #111721;
+    --ink-700: #1A2230;
+    --line: #24303F;
+    --text-hi: #E6EDF5;
+    --text-lo: #8395AC;
+    --signal: #35E0C8;
+    --actor: #FFB020;
+    --depth-2: #8B7BFF;
+    --depth-3: #FF6B9B;
+    --idle: #3D4B5C;
+  }
+
+  body {
+    @apply bg-ink-900 text-text-hi font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Background pattern for the graph */
+.graph-bg-pattern {
+  background-image: radial-gradient(var(--line) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
