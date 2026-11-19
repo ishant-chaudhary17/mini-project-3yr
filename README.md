@@ -127,14 +127,20 @@ Three strategies are implemented:
 
 ---
 
-## 🎨 Frontend Features
+## 🎨 Features
 
-- **Interactive SVG graph** — force-directed layout (Fruchterman-Reingold), pan/zoom/drag
-- **Animated particles** — travel along edges via `requestAnimationFrame`
-- **Real-time analytics** — nodes reached, edges traversed, depth
-- **Event timeline** — level-by-level propagation log
-- **Dark / Light mode** — persisted in `localStorage`
-- **Keyboard shortcuts** — `Space`, `R`, `F`, `/`, `D`, `1-3`, `Esc`
+- **Interactive SVG Graph** — Force-directed layout (Fruchterman-Reingold), pan/zoom/drag, glowing radar waves.
+- **✨ Autonomous Auto-Demo Mode** — Self-driving showcase with curated scenarios and live signal narration.
+- **📱 Simulated Follower Phone Lockscreen** — Live mobile push notification feed displaying incoming notifications in real-time.
+- **💬 Follower Reactions & Secondary Reshares** — Other network members actively like, comment, and reshare posts, firing secondary signal waves.
+- **👑 Influencer & Write Amplification Analysis** — Demonstrates the "Celebrity Problem" and measures write amplification ratio ($1 \to N$ writes).
+- **⏭️ Step-by-Step Execution Mode** — Advance one BFS hop level at a time for viva and project demonstrations.
+- **⚙️ Distributed System Architecture Modal** — Visualizes the production message broker pipeline (`Producer ➔ API Gateway ➔ Kafka/Redis ➔ Worker Pool ➔ Timeline Cache`).
+- **🎓 Project Viva Evaluation Guide** — Built-in answers to essential viva questions on graph theory, time complexity ($O(V+E)$), and push vs pull models.
+- **🔊 Synthesized Web Audio Effects** — Interactive audio chimes for notification arrivals and completion (muteable).
+- **Real-Time Analytics & Report Export** — Real-time metrics and one-click JSON simulation report download.
+- **Dark / Light Mode** — Persisted in `localStorage`.
+- **Keyboard Shortcuts** — `Space`, `R`, `F`, `P`, `A`, `/`, `D`, `1-3`, `Esc`.
 
 ---
 

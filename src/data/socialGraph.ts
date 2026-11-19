@@ -1,4 +1,43 @@
-import { User, Edge } from '../types/graph';
+import { User, Edge, PostPreset } from '../types/graph';
+
+
+export const postPresets: PostPreset[] = [
+  {
+    id: 'p1',
+    title: '🚀 Architecture Launch',
+    text: 'Just deployed our new real-time BFS notification fan-out engine! Write amplification test in progress. 🔥',
+    category: 'tech',
+    tags: ['#DistributedSystems', '#BFS', '#Tech']
+  },
+  {
+    id: 'p2',
+    title: '🏆 Mini Project Showcase',
+    text: 'Excited to demonstrate the Social Graph Fan-Out Visualizer for our 3rd Year evaluation! Proud of our work! 🎉',
+    category: 'milestone',
+    tags: ['#MiniProject', '#GraphTheory', '#Viva']
+  },
+  {
+    id: 'p3',
+    title: '🤔 Push vs Pull Fan-out',
+    text: 'At 50M followers, fan-out on write causes huge write spikes. Hybrid push-pull is the only way to survive. Thoughts?',
+    category: 'tech',
+    tags: ['#SystemDesign', '#Scalability', '#Architecture']
+  },
+  {
+    id: 'p4',
+    title: '📸 Hackathon Campus Team',
+    text: 'Great brainstorming session with the graph algorithms research team today! ☕📚',
+    category: 'general',
+    tags: ['#CampusLife', '#Colleagues']
+  },
+  {
+    id: 'p5',
+    title: '⚡ Redis Cluster Alert',
+    text: 'Scheduled message queue maintenance tonight at 02:00 UTC. Expect zero notification lag across all nodes.',
+    category: 'announcement',
+    tags: ['#Infra', '#DevOps', '#Alert']
+  }
+];
 
 export const users: User[] = [
   {
@@ -7,7 +46,12 @@ export const users: User[] = [
     "username": "@alexmorgan",
     "avatar": "AM",
     "followersCount": 8,
-    "followingCount": 8
+    "followingCount": 8,
+    "isVerified": false,
+    "role": "Influencer",
+    "department": "Computer Science",
+    "bio": "Building large-scale graph notification engines \ud83c\udf10",
+    "avatarColor": "from-amber-500 to-orange-600"
   },
   {
     "id": "u01",
@@ -15,7 +59,12 @@ export const users: User[] = [
     "username": "@sarahw",
     "avatar": "SW",
     "followersCount": 9,
-    "followingCount": 9
+    "followingCount": 9,
+    "isVerified": true,
+    "role": "Influencer",
+    "department": "AI Research Lab",
+    "bio": "Distributed systems, Kafka & Redis fan-out fanatic \u26a1",
+    "avatarColor": "from-cyan-500 to-blue-600"
   },
   {
     "id": "u02",
@@ -23,7 +72,12 @@ export const users: User[] = [
     "username": "@johnc",
     "avatar": "JC",
     "followersCount": 10,
-    "followingCount": 10
+    "followingCount": 10,
+    "isVerified": true,
+    "role": "Influencer",
+    "department": "Design Studio",
+    "bio": "Visual systems & SVG interactive animation specialist \u2728",
+    "avatarColor": "from-emerald-500 to-teal-600"
   },
   {
     "id": "u03",
@@ -31,7 +85,12 @@ export const users: User[] = [
     "username": "@emmad",
     "avatar": "ED",
     "followersCount": 10,
-    "followingCount": 10
+    "followingCount": 10,
+    "isVerified": true,
+    "role": "Influencer",
+    "department": "Cloud & Systems",
+    "bio": "Graph Neural Networks & community detection \ud83e\udde0",
+    "avatarColor": "from-purple-500 to-indigo-600"
   },
   {
     "id": "u04",
@@ -39,7 +98,12 @@ export const users: User[] = [
     "username": "@melissaramirez79",
     "avatar": "MR",
     "followersCount": 9,
-    "followingCount": 9
+    "followingCount": 9,
+    "isVerified": true,
+    "role": "Influencer",
+    "department": "Campus Community",
+    "bio": "3rd Year CS Undergrad | Full-stack & algorithms lead \ud83d\ude80",
+    "avatarColor": "from-pink-500 to-rose-600"
   },
   {
     "id": "u05",
@@ -47,7 +111,12 @@ export const users: User[] = [
     "username": "@ryanlopez15",
     "avatar": "RL",
     "followersCount": 11,
-    "followingCount": 11
+    "followingCount": 11,
+    "isVerified": true,
+    "role": "Influencer",
+    "department": "Computer Science",
+    "bio": "Cloud infrastructure, Kubernetes & resilience \ud83d\udee0\ufe0f",
+    "avatarColor": "from-violet-500 to-purple-600"
   },
   {
     "id": "u06",
@@ -55,7 +124,12 @@ export const users: User[] = [
     "username": "@jessicabaker11",
     "avatar": "JB",
     "followersCount": 7,
-    "followingCount": 7
+    "followingCount": 7,
+    "isVerified": false,
+    "role": "Member",
+    "department": "AI Research Lab",
+    "bio": "Data structures, BFS traversal & graph optimization \ud83d\udcca",
+    "avatarColor": "from-blue-500 to-cyan-600"
   },
   {
     "id": "u07",
@@ -63,7 +137,12 @@ export const users: User[] = [
     "username": "@thomasdavis22",
     "avatar": "TD",
     "followersCount": 4,
-    "followingCount": 4
+    "followingCount": 4,
+    "isVerified": false,
+    "role": "Influencer",
+    "department": "Design Studio",
+    "bio": "UI/UX design enthusiast & frontend developer \ud83c\udfa8",
+    "avatarColor": "from-amber-500 to-orange-600"
   },
   {
     "id": "u08",
@@ -71,7 +150,12 @@ export const users: User[] = [
     "username": "@charlesflores96",
     "avatar": "CF",
     "followersCount": 6,
-    "followingCount": 6
+    "followingCount": 6,
+    "isVerified": false,
+    "role": "Tech Lead",
+    "department": "Cloud & Systems",
+    "bio": "Researching social network propagation dynamics \ud83d\udd2c",
+    "avatarColor": "from-cyan-500 to-blue-600"
   },
   {
     "id": "u09",
@@ -79,7 +163,12 @@ export const users: User[] = [
     "username": "@laurenmartinez17",
     "avatar": "LM",
     "followersCount": 3,
-    "followingCount": 3
+    "followingCount": 3,
+    "isVerified": false,
+    "role": "Designer",
+    "department": "Campus Community",
+    "bio": "Open source contributor & backend engineer \ud83d\udcbb",
+    "avatarColor": "from-emerald-500 to-teal-600"
   },
   {
     "id": "u10",
@@ -87,7 +176,12 @@ export const users: User[] = [
     "username": "@margaretmiller33",
     "avatar": "MM",
     "followersCount": 4,
-    "followingCount": 4
+    "followingCount": 4,
+    "isVerified": false,
+    "role": "Student",
+    "department": "Computer Science",
+    "bio": "Building large-scale graph notification engines \ud83c\udf10",
+    "avatarColor": "from-purple-500 to-indigo-600"
   },
   {
     "id": "u11",
@@ -95,7 +189,12 @@ export const users: User[] = [
     "username": "@karenjackson80",
     "avatar": "KJ",
     "followersCount": 3,
-    "followingCount": 3
+    "followingCount": 3,
+    "isVerified": false,
+    "role": "Researcher",
+    "department": "AI Research Lab",
+    "bio": "Distributed systems, Kafka & Redis fan-out fanatic \u26a1",
+    "avatarColor": "from-pink-500 to-rose-600"
   },
   {
     "id": "u12",
@@ -103,7 +202,12 @@ export const users: User[] = [
     "username": "@ashleyscott37",
     "avatar": "AS",
     "followersCount": 5,
-    "followingCount": 5
+    "followingCount": 5,
+    "isVerified": false,
+    "role": "DevOps Eng",
+    "department": "Design Studio",
+    "bio": "Visual systems & SVG interactive animation specialist \u2728",
+    "avatarColor": "from-violet-500 to-purple-600"
   },
   {
     "id": "u13",
@@ -111,7 +215,12 @@ export const users: User[] = [
     "username": "@kimberlygreen65",
     "avatar": "KG",
     "followersCount": 2,
-    "followingCount": 2
+    "followingCount": 2,
+    "isVerified": false,
+    "role": "Member",
+    "department": "Cloud & Systems",
+    "bio": "Graph Neural Networks & community detection \ud83e\udde0",
+    "avatarColor": "from-blue-500 to-cyan-600"
   },
   {
     "id": "u14",
@@ -119,7 +228,12 @@ export const users: User[] = [
     "username": "@mariathompson66",
     "avatar": "MT",
     "followersCount": 3,
-    "followingCount": 3
+    "followingCount": 3,
+    "isVerified": false,
+    "role": "Influencer",
+    "department": "Campus Community",
+    "bio": "3rd Year CS Undergrad | Full-stack & algorithms lead \ud83d\ude80",
+    "avatarColor": "from-amber-500 to-orange-600"
   },
   {
     "id": "u15",
@@ -127,7 +241,12 @@ export const users: User[] = [
     "username": "@justinnelson39",
     "avatar": "JN",
     "followersCount": 3,
-    "followingCount": 3
+    "followingCount": 3,
+    "isVerified": false,
+    "role": "Tech Lead",
+    "department": "Computer Science",
+    "bio": "Cloud infrastructure, Kubernetes & resilience \ud83d\udee0\ufe0f",
+    "avatarColor": "from-cyan-500 to-blue-600"
   },
   {
     "id": "u16",
@@ -135,7 +254,12 @@ export const users: User[] = [
     "username": "@nancydavis94",
     "avatar": "ND",
     "followersCount": 3,
-    "followingCount": 3
+    "followingCount": 3,
+    "isVerified": false,
+    "role": "Designer",
+    "department": "AI Research Lab",
+    "bio": "Data structures, BFS traversal & graph optimization \ud83d\udcca",
+    "avatarColor": "from-emerald-500 to-teal-600"
   },
   {
     "id": "u17",
@@ -143,7 +267,12 @@ export const users: User[] = [
     "username": "@jenniferhall62",
     "avatar": "JH",
     "followersCount": 3,
-    "followingCount": 3
+    "followingCount": 3,
+    "isVerified": false,
+    "role": "Student",
+    "department": "Design Studio",
+    "bio": "UI/UX design enthusiast & frontend developer \ud83c\udfa8",
+    "avatarColor": "from-purple-500 to-indigo-600"
   },
   {
     "id": "u18",
@@ -151,7 +280,12 @@ export const users: User[] = [
     "username": "@laurengreen78",
     "avatar": "LG",
     "followersCount": 2,
-    "followingCount": 2
+    "followingCount": 2,
+    "isVerified": false,
+    "role": "Researcher",
+    "department": "Cloud & Systems",
+    "bio": "Researching social network propagation dynamics \ud83d\udd2c",
+    "avatarColor": "from-pink-500 to-rose-600"
   },
   {
     "id": "u19",
@@ -159,7 +293,12 @@ export const users: User[] = [
     "username": "@robertbrown5",
     "avatar": "RB",
     "followersCount": 2,
-    "followingCount": 2
+    "followingCount": 2,
+    "isVerified": false,
+    "role": "DevOps Eng",
+    "department": "Campus Community",
+    "bio": "Open source contributor & backend engineer \ud83d\udcbb",
+    "avatarColor": "from-violet-500 to-purple-600"
   },
   {
     "id": "u20",
@@ -167,7 +306,12 @@ export const users: User[] = [
     "username": "@johnhall22",
     "avatar": "JH",
     "followersCount": 2,
-    "followingCount": 2
+    "followingCount": 2,
+    "isVerified": false,
+    "role": "Member",
+    "department": "Computer Science",
+    "bio": "Building large-scale graph notification engines \ud83c\udf10",
+    "avatarColor": "from-blue-500 to-cyan-600"
   },
   {
     "id": "u21",
@@ -175,7 +319,12 @@ export const users: User[] = [
     "username": "@dorothylee29",
     "avatar": "DL",
     "followersCount": 3,
-    "followingCount": 3
+    "followingCount": 3,
+    "isVerified": false,
+    "role": "Influencer",
+    "department": "AI Research Lab",
+    "bio": "Distributed systems, Kafka & Redis fan-out fanatic \u26a1",
+    "avatarColor": "from-amber-500 to-orange-600"
   },
   {
     "id": "u22",
@@ -183,7 +332,12 @@ export const users: User[] = [
     "username": "@robertthompson65",
     "avatar": "RT",
     "followersCount": 2,
-    "followingCount": 2
+    "followingCount": 2,
+    "isVerified": false,
+    "role": "Tech Lead",
+    "department": "Design Studio",
+    "bio": "Visual systems & SVG interactive animation specialist \u2728",
+    "avatarColor": "from-cyan-500 to-blue-600"
   },
   {
     "id": "u23",
@@ -191,7 +345,12 @@ export const users: User[] = [
     "username": "@jessicasanchez61",
     "avatar": "JS",
     "followersCount": 5,
-    "followingCount": 5
+    "followingCount": 5,
+    "isVerified": false,
+    "role": "Designer",
+    "department": "Cloud & Systems",
+    "bio": "Graph Neural Networks & community detection \ud83e\udde0",
+    "avatarColor": "from-emerald-500 to-teal-600"
   },
   {
     "id": "u24",
@@ -199,7 +358,12 @@ export const users: User[] = [
     "username": "@amandataylor15",
     "avatar": "AT",
     "followersCount": 3,
-    "followingCount": 3
+    "followingCount": 3,
+    "isVerified": false,
+    "role": "Student",
+    "department": "Campus Community",
+    "bio": "3rd Year CS Undergrad | Full-stack & algorithms lead \ud83d\ude80",
+    "avatarColor": "from-purple-500 to-indigo-600"
   },
   {
     "id": "u25",
@@ -207,7 +371,12 @@ export const users: User[] = [
     "username": "@nancylopez73",
     "avatar": "NL",
     "followersCount": 2,
-    "followingCount": 2
+    "followingCount": 2,
+    "isVerified": false,
+    "role": "Researcher",
+    "department": "Computer Science",
+    "bio": "Cloud infrastructure, Kubernetes & resilience \ud83d\udee0\ufe0f",
+    "avatarColor": "from-pink-500 to-rose-600"
   },
   {
     "id": "u26",
@@ -215,7 +384,12 @@ export const users: User[] = [
     "username": "@sarahnelson28",
     "avatar": "SN",
     "followersCount": 6,
-    "followingCount": 6
+    "followingCount": 6,
+    "isVerified": false,
+    "role": "DevOps Eng",
+    "department": "AI Research Lab",
+    "bio": "Data structures, BFS traversal & graph optimization \ud83d\udcca",
+    "avatarColor": "from-violet-500 to-purple-600"
   },
   {
     "id": "u27",
@@ -223,7 +397,12 @@ export const users: User[] = [
     "username": "@jessicarodriguez48",
     "avatar": "JR",
     "followersCount": 3,
-    "followingCount": 3
+    "followingCount": 3,
+    "isVerified": false,
+    "role": "Member",
+    "department": "Design Studio",
+    "bio": "UI/UX design enthusiast & frontend developer \ud83c\udfa8",
+    "avatarColor": "from-blue-500 to-cyan-600"
   },
   {
     "id": "u28",
@@ -231,7 +410,12 @@ export const users: User[] = [
     "username": "@ryanwalker40",
     "avatar": "RW",
     "followersCount": 4,
-    "followingCount": 4
+    "followingCount": 4,
+    "isVerified": false,
+    "role": "Influencer",
+    "department": "Cloud & Systems",
+    "bio": "Researching social network propagation dynamics \ud83d\udd2c",
+    "avatarColor": "from-amber-500 to-orange-600"
   },
   {
     "id": "u29",
@@ -239,7 +423,12 @@ export const users: User[] = [
     "username": "@davidwilliams61",
     "avatar": "DW",
     "followersCount": 3,
-    "followingCount": 3
+    "followingCount": 3,
+    "isVerified": false,
+    "role": "Tech Lead",
+    "department": "Campus Community",
+    "bio": "Open source contributor & backend engineer \ud83d\udcbb",
+    "avatarColor": "from-cyan-500 to-blue-600"
   },
   {
     "id": "u30",
@@ -247,7 +436,12 @@ export const users: User[] = [
     "username": "@angelataylor83",
     "avatar": "AT",
     "followersCount": 4,
-    "followingCount": 4
+    "followingCount": 4,
+    "isVerified": false,
+    "role": "Designer",
+    "department": "Computer Science",
+    "bio": "Building large-scale graph notification engines \ud83c\udf10",
+    "avatarColor": "from-emerald-500 to-teal-600"
   },
   {
     "id": "u31",
@@ -255,7 +449,12 @@ export const users: User[] = [
     "username": "@jessicarobinson67",
     "avatar": "JR",
     "followersCount": 3,
-    "followingCount": 3
+    "followingCount": 3,
+    "isVerified": false,
+    "role": "Student",
+    "department": "AI Research Lab",
+    "bio": "Distributed systems, Kafka & Redis fan-out fanatic \u26a1",
+    "avatarColor": "from-purple-500 to-indigo-600"
   },
   {
     "id": "u32",
@@ -263,7 +462,12 @@ export const users: User[] = [
     "username": "@kevinmoore81",
     "avatar": "KM",
     "followersCount": 5,
-    "followingCount": 5
+    "followingCount": 5,
+    "isVerified": false,
+    "role": "Researcher",
+    "department": "Design Studio",
+    "bio": "Visual systems & SVG interactive animation specialist \u2728",
+    "avatarColor": "from-pink-500 to-rose-600"
   },
   {
     "id": "u33",
@@ -271,7 +475,12 @@ export const users: User[] = [
     "username": "@josephmiller49",
     "avatar": "JM",
     "followersCount": 4,
-    "followingCount": 4
+    "followingCount": 4,
+    "isVerified": false,
+    "role": "DevOps Eng",
+    "department": "Cloud & Systems",
+    "bio": "Graph Neural Networks & community detection \ud83e\udde0",
+    "avatarColor": "from-violet-500 to-purple-600"
   },
   {
     "id": "u34",
@@ -279,7 +488,12 @@ export const users: User[] = [
     "username": "@helenadams81",
     "avatar": "HA",
     "followersCount": 1,
-    "followingCount": 1
+    "followingCount": 1,
+    "isVerified": false,
+    "role": "Member",
+    "department": "Campus Community",
+    "bio": "3rd Year CS Undergrad | Full-stack & algorithms lead \ud83d\ude80",
+    "avatarColor": "from-blue-500 to-cyan-600"
   },
   {
     "id": "u35",
@@ -287,7 +501,12 @@ export const users: User[] = [
     "username": "@chrisnelson74",
     "avatar": "CN",
     "followersCount": 1,
-    "followingCount": 1
+    "followingCount": 1,
+    "isVerified": false,
+    "role": "Influencer",
+    "department": "Computer Science",
+    "bio": "Cloud infrastructure, Kubernetes & resilience \ud83d\udee0\ufe0f",
+    "avatarColor": "from-amber-500 to-orange-600"
   },
   {
     "id": "u36",
@@ -295,7 +514,12 @@ export const users: User[] = [
     "username": "@emilylee72",
     "avatar": "EL",
     "followersCount": 0,
-    "followingCount": 0
+    "followingCount": 0,
+    "isVerified": false,
+    "role": "Tech Lead",
+    "department": "AI Research Lab",
+    "bio": "Data structures, BFS traversal & graph optimization \ud83d\udcca",
+    "avatarColor": "from-cyan-500 to-blue-600"
   },
   {
     "id": "u37",
@@ -303,7 +527,12 @@ export const users: User[] = [
     "username": "@nancysmith71",
     "avatar": "NS",
     "followersCount": 1,
-    "followingCount": 1
+    "followingCount": 1,
+    "isVerified": false,
+    "role": "Designer",
+    "department": "Design Studio",
+    "bio": "UI/UX design enthusiast & frontend developer \ud83c\udfa8",
+    "avatarColor": "from-emerald-500 to-teal-600"
   },
   {
     "id": "u38",
@@ -311,7 +540,12 @@ export const users: User[] = [
     "username": "@deborahgarcia70",
     "avatar": "DG",
     "followersCount": 1,
-    "followingCount": 1
+    "followingCount": 1,
+    "isVerified": false,
+    "role": "Student",
+    "department": "Cloud & Systems",
+    "bio": "Researching social network propagation dynamics \ud83d\udd2c",
+    "avatarColor": "from-purple-500 to-indigo-600"
   },
   {
     "id": "u39",
@@ -319,7 +553,12 @@ export const users: User[] = [
     "username": "@thomasanderson35",
     "avatar": "TA",
     "followersCount": 2,
-    "followingCount": 2
+    "followingCount": 2,
+    "isVerified": false,
+    "role": "Researcher",
+    "department": "Campus Community",
+    "bio": "Open source contributor & backend engineer \ud83d\udcbb",
+    "avatarColor": "from-pink-500 to-rose-600"
   },
   {
     "id": "u40",
@@ -327,7 +566,12 @@ export const users: User[] = [
     "username": "@alexhernandez96",
     "avatar": "AH",
     "followersCount": 2,
-    "followingCount": 2
+    "followingCount": 2,
+    "isVerified": false,
+    "role": "DevOps Eng",
+    "department": "Computer Science",
+    "bio": "Building large-scale graph notification engines \ud83c\udf10",
+    "avatarColor": "from-violet-500 to-purple-600"
   },
   {
     "id": "u41",
@@ -335,7 +579,12 @@ export const users: User[] = [
     "username": "@kimberlythomas23",
     "avatar": "KT",
     "followersCount": 0,
-    "followingCount": 0
+    "followingCount": 0,
+    "isVerified": false,
+    "role": "Member",
+    "department": "AI Research Lab",
+    "bio": "Distributed systems, Kafka & Redis fan-out fanatic \u26a1",
+    "avatarColor": "from-blue-500 to-cyan-600"
   },
   {
     "id": "u42",
@@ -343,7 +592,12 @@ export const users: User[] = [
     "username": "@thomasbrown27",
     "avatar": "TB",
     "followersCount": 3,
-    "followingCount": 3
+    "followingCount": 3,
+    "isVerified": false,
+    "role": "Influencer",
+    "department": "Design Studio",
+    "bio": "Visual systems & SVG interactive animation specialist \u2728",
+    "avatarColor": "from-amber-500 to-orange-600"
   },
   {
     "id": "u43",
@@ -351,7 +605,12 @@ export const users: User[] = [
     "username": "@susanjones68",
     "avatar": "SJ",
     "followersCount": 1,
-    "followingCount": 1
+    "followingCount": 1,
+    "isVerified": false,
+    "role": "Tech Lead",
+    "department": "Cloud & Systems",
+    "bio": "Graph Neural Networks & community detection \ud83e\udde0",
+    "avatarColor": "from-cyan-500 to-blue-600"
   },
   {
     "id": "u44",
@@ -359,7 +618,12 @@ export const users: User[] = [
     "username": "@sarahking15",
     "avatar": "SK",
     "followersCount": 1,
-    "followingCount": 1
+    "followingCount": 1,
+    "isVerified": false,
+    "role": "Designer",
+    "department": "Campus Community",
+    "bio": "3rd Year CS Undergrad | Full-stack & algorithms lead \ud83d\ude80",
+    "avatarColor": "from-emerald-500 to-teal-600"
   },
   {
     "id": "u45",
@@ -367,7 +631,12 @@ export const users: User[] = [
     "username": "@susanhall22",
     "avatar": "SH",
     "followersCount": 1,
-    "followingCount": 1
+    "followingCount": 1,
+    "isVerified": false,
+    "role": "Student",
+    "department": "Computer Science",
+    "bio": "Cloud infrastructure, Kubernetes & resilience \ud83d\udee0\ufe0f",
+    "avatarColor": "from-purple-500 to-indigo-600"
   },
   {
     "id": "u46",
@@ -375,7 +644,12 @@ export const users: User[] = [
     "username": "@mattthompson40",
     "avatar": "MT",
     "followersCount": 0,
-    "followingCount": 0
+    "followingCount": 0,
+    "isVerified": false,
+    "role": "Researcher",
+    "department": "AI Research Lab",
+    "bio": "Data structures, BFS traversal & graph optimization \ud83d\udcca",
+    "avatarColor": "from-pink-500 to-rose-600"
   },
   {
     "id": "u47",
@@ -383,7 +657,12 @@ export const users: User[] = [
     "username": "@josephwright13",
     "avatar": "JW",
     "followersCount": 1,
-    "followingCount": 1
+    "followingCount": 1,
+    "isVerified": false,
+    "role": "DevOps Eng",
+    "department": "Design Studio",
+    "bio": "UI/UX design enthusiast & frontend developer \ud83c\udfa8",
+    "avatarColor": "from-violet-500 to-purple-600"
   },
   {
     "id": "u48",
@@ -391,7 +670,12 @@ export const users: User[] = [
     "username": "@chrisjohnson85",
     "avatar": "CJ",
     "followersCount": 1,
-    "followingCount": 1
+    "followingCount": 1,
+    "isVerified": false,
+    "role": "Member",
+    "department": "Cloud & Systems",
+    "bio": "Researching social network propagation dynamics \ud83d\udd2c",
+    "avatarColor": "from-blue-500 to-cyan-600"
   },
   {
     "id": "u49",
@@ -399,7 +683,12 @@ export const users: User[] = [
     "username": "@danielbrown33",
     "avatar": "DB",
     "followersCount": 0,
-    "followingCount": 0
+    "followingCount": 0,
+    "isVerified": false,
+    "role": "Influencer",
+    "department": "Campus Community",
+    "bio": "Open source contributor & backend engineer \ud83d\udcbb",
+    "avatarColor": "from-amber-500 to-orange-600"
   }
 ];
 

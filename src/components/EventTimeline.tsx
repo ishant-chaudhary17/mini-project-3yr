@@ -55,17 +55,23 @@ export function EventTimeline({ events, users }: EventTimelineProps) {
               {ev.level === 0 ? 'ACTION_TRIGGERED' : 'NOTIFICATION_SENT'}
             </div>
             <div className="text-xs text-text-hi truncate">
-              <span className="font-medium">{getUserName(ev.source)}</span>
+              <span className="font-semibold text-text-hi">{getUserName(ev.source)}</span>
               {ev.level > 0 && (
                 <>
                   <span className="text-text-lo mx-1">→</span>
-                  <span className="font-medium">{getUserName(ev.target)}</span>
+                  <span className="font-semibold text-signal">{getUserName(ev.target)}</span>
                 </>
               )}
             </div>
-            <div className="text-[10px] text-text-lo mt-1 uppercase">
-              Action: {ev.action}
-            </div>
+            {ev.message ? (
+              <div className="text-[10px] text-text-lo italic truncate mt-1">
+                {ev.message}
+              </div>
+            ) : (
+              <div className="text-[10px] text-text-lo mt-1 uppercase">
+                Action: {ev.action}
+              </div>
+            )}
           </div>
         ))}
       </div>

@@ -56,3 +56,15 @@
   background-image: radial-gradient(var(--line) 1px, transparent 1px);
   background-size: 24px 24px;
 }
+
+/* graph-bg is used on the SVG element in GraphVisualizer for click-to-deselect detection */
+.graph-bg {
+  /* intentionally empty class — used as a CSS selector marker */
+}
+
+/* Pulse keyframe used by HeroGraph node halos */
+@keyframes pulse {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50%       { opacity: 0.7;  transform: scale(1.08); }
+}
+
