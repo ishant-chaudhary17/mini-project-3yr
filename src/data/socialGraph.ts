@@ -126,9 +126,9 @@ export const users: User[] = [
     "followersCount": 7,
     "followingCount": 7,
     "isVerified": false,
-    "role": "Member",
+    "role": "Network Manager",
     "department": "AI Research Lab",
-    "bio": "Data structures, BFS traversal & graph optimization \ud83d\udcca",
+    "bio": "Fan-Out Gateway Manager | Node-to-node relay \ud83d\udef0\ufe0f",
     "avatarColor": "from-blue-500 to-cyan-600"
   },
   {
@@ -191,9 +191,9 @@ export const users: User[] = [
     "followersCount": 3,
     "followingCount": 3,
     "isVerified": false,
-    "role": "Researcher",
+    "role": "Network Manager",
     "department": "AI Research Lab",
-    "bio": "Distributed systems, Kafka & Redis fan-out fanatic \u26a1",
+    "bio": "Distributed Systems Network Manager | Signal monitor \ud83d\udd2c",
     "avatarColor": "from-pink-500 to-rose-600"
   },
   {
@@ -204,9 +204,9 @@ export const users: User[] = [
     "followersCount": 5,
     "followingCount": 5,
     "isVerified": false,
-    "role": "DevOps Eng",
+    "role": "Network Manager",
     "department": "Design Studio",
-    "bio": "Visual systems & SVG interactive animation specialist \u2728",
+    "bio": "Core Network Manager | Edge gateway & traffic routing \ud83d\udce1",
     "avatarColor": "from-violet-500 to-purple-600"
   },
   {
@@ -295,9 +295,9 @@ export const users: User[] = [
     "followersCount": 2,
     "followingCount": 2,
     "isVerified": false,
-    "role": "DevOps Eng",
+    "role": "Network Manager",
     "department": "Campus Community",
-    "bio": "Open source contributor & backend engineer \ud83d\udcbb",
+    "bio": "Network Traffic Manager & Redis cluster monitor \ud83d\udee0\ufe0f",
     "avatarColor": "from-violet-500 to-purple-600"
   },
   {
@@ -334,9 +334,9 @@ export const users: User[] = [
     "followersCount": 2,
     "followingCount": 2,
     "isVerified": false,
-    "role": "Tech Lead",
+    "role": "Network Manager",
     "department": "Design Studio",
-    "bio": "Visual systems & SVG interactive animation specialist \u2728",
+    "bio": "Cluster Network Manager | High-throughput BFS relay \u26a1",
     "avatarColor": "from-cyan-500 to-blue-600"
   },
   {
@@ -386,9 +386,9 @@ export const users: User[] = [
     "followersCount": 6,
     "followingCount": 6,
     "isVerified": false,
-    "role": "DevOps Eng",
+    "role": "Network Manager",
     "department": "AI Research Lab",
-    "bio": "Data structures, BFS traversal & graph optimization \ud83d\udcca",
+    "bio": "Subnet Manager | Load balancing & packet relay \ud83c\udf10",
     "avatarColor": "from-violet-500 to-purple-600"
   },
   {
@@ -399,9 +399,9 @@ export const users: User[] = [
     "followersCount": 3,
     "followingCount": 3,
     "isVerified": false,
-    "role": "Member",
+    "role": "Network Manager",
     "department": "Design Studio",
-    "bio": "UI/UX design enthusiast & frontend developer \ud83c\udfa8",
+    "bio": "Broadcast Node Manager | Ingestion & delivery queue \ud83d\udcca",
     "avatarColor": "from-blue-500 to-cyan-600"
   },
   {

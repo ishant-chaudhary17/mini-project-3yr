@@ -268,6 +268,7 @@ export function GraphVisualizer({
             const isProcessing = ns?.status === 'processing';
             const isHovered = hoveredNodeId === u.id;
             const isInfluencer = u.isVerified || u.followersCount >= 9;
+            const isNetworkManager = u.role === 'Network Manager';
 
             const dimmedBySelection = !!(selectedUserId && !isSelected && !selectedNeighbors.has(u.id));
             const dimmedBySearch = !!(highlightedUserIds && !highlightedUserIds.has(u.id));
@@ -367,6 +368,20 @@ export function GraphVisualizer({
                       className="text-[8px] select-none pointer-events-none fill-ink-900 font-bold"
                     >
                       ★
+                    </text>
+                  </g>
+                )}
+
+                {/* Network Manager / Relay Badge */}
+                {isNetworkManager && !isActor && (
+                  <g transform={`translate(${r - 2}, ${-r - 4})`}>
+                    <circle r={6.5} fill="#0D9488" stroke="#35E0C8" strokeWidth={1} />
+                    <text
+                      textAnchor="middle"
+                      dominantBaseline="central"
+                      className="text-[7px] select-none pointer-events-none fill-white font-bold"
+                    >
+                      📡
                     </text>
                   </g>
                 )}
@@ -576,6 +591,12 @@ export function GraphVisualizer({
             ★
           </div> 
           <span>Influencer Node</span>
+        </div>
+        <div className="flex items-center gap-2 text-xs text-text-hi">
+          <div className="w-3.5 h-3.5 rounded-full bg-teal-600 border border-teal-300 flex items-center justify-center text-[8px] text-white">
+            📡
+          </div> 
+          <span className="font-semibold text-teal-300">Network Manager (Relay)</span>
         </div>
       </div>
     </div>

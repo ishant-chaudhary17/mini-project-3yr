@@ -10,7 +10,8 @@ import {
   Crown, 
   Check, 
   Sparkles,
-  MessageSquare
+  MessageSquare,
+  Radio
 } from 'lucide-react';
 import { ActionType, PropagationStrategy, SimulationMode, SimulationSpeed, SimulationState, User } from '../types/graph';
 import { postPresets } from '../data/socialGraph';
@@ -27,6 +28,7 @@ interface SidebarProps {
   onResume: () => void;
   onReset: () => void;
   onStepNext?: () => void;
+  onOpenNetworkManagers?: () => void;
   onSearch: (q: string) => void;
   searchQuery: string;
 }
@@ -40,6 +42,7 @@ export function Sidebar({
   onResume, 
   onReset, 
   onStepNext,
+  onOpenNetworkManagers,
   onSearch, 
   searchQuery 
 }: SidebarProps) {
@@ -124,6 +127,22 @@ export function Sidebar({
                 Alex Morgan (8)
               </button>
             </div>
+
+            {/* Connected Network Managers Quick Banner */}
+            {onOpenNetworkManagers && (
+              <button
+                onClick={onOpenNetworkManagers}
+                className="w-full flex items-center justify-between rounded-xl border border-signal/40 bg-signal/10 px-3 py-2 text-[11px] text-signal hover:bg-signal/20 transition-all shadow-sm"
+              >
+                <span className="flex items-center gap-1.5 font-bold">
+                  <Radio size={13} className="animate-pulse" />
+                  Connected Managers Hub
+                </span>
+                <span className="font-semibold text-[10px] text-text-hi bg-ink-900/60 px-2 py-0.5 rounded-full border border-line">
+                  Live Traffic →
+                </span>
+              </button>
+            )}
 
             {/* Action Type */}
             <div>

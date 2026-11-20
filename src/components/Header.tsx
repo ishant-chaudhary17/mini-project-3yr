@@ -19,6 +19,7 @@ interface HeaderProps {
   status: string;
   onOpenArchitecture: () => void;
   onOpenViva: () => void;
+  onOpenNetworkManagers: () => void;
   onTogglePhone: () => void;
   isPhoneOpen: boolean;
   isAutoDemoActive: boolean;
@@ -29,6 +30,7 @@ export function Header({
   status, 
   onOpenArchitecture, 
   onOpenViva, 
+  onOpenNetworkManagers,
   onTogglePhone,
   isPhoneOpen,
   isAutoDemoActive,
@@ -91,6 +93,16 @@ export function Header({
         >
           <Smartphone size={15} />
           <span className="hidden md:inline">Phone Feed</span>
+        </button>
+
+        {/* Network Managers Activity Hub Button */}
+        <button
+          onClick={onOpenNetworkManagers}
+          className="flex items-center gap-1.5 rounded-xl border border-line bg-ink-800 px-3 py-1.5 text-xs font-semibold text-text-lo hover:text-text-hi hover:bg-ink-700 transition-all hover:border-signal/50"
+          title="Show Activity of Network Managers Connected to Influencers"
+        >
+          <Radio size={15} className="text-signal animate-pulse" />
+          <span className="hidden lg:inline">Network Managers</span>
         </button>
 
         {/* System Architecture Button */}

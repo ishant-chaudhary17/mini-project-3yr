@@ -1,4 +1,13 @@
-export type UserRole = 'Influencer' | 'Tech Lead' | 'Designer' | 'Student' | 'Researcher' | 'DevOps Eng' | 'Member';
+export type UserRole = 
+  | 'Influencer' 
+  | 'Network Manager' 
+  | 'Cluster Admin' 
+  | 'Tech Lead' 
+  | 'DevOps Eng' 
+  | 'Designer' 
+  | 'Student' 
+  | 'Researcher' 
+  | 'Member';
 
 export type User = {
   id: string;

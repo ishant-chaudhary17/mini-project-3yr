@@ -12,6 +12,7 @@ import { PhoneMockup } from './PhoneMockup';
 import { ArchitectureModal } from './ArchitectureModal';
 import { VivaGuideModal } from './VivaGuideModal';
 import { AutoDemoHUD } from './AutoDemoHUD';
+import { NetworkManagerHub } from './NetworkManagerHub';
 
 export function Dashboard() {
   const { 
@@ -31,6 +32,7 @@ export function Dashboard() {
   const [isPhoneOpen, setIsPhoneOpen] = useState(false);
   const [isArchitectureOpen, setIsArchitectureOpen] = useState(false);
   const [isVivaOpen, setIsVivaOpen] = useState(false);
+  const [isNetworkManagerOpen, setIsNetworkManagerOpen] = useState(false);
   
   const graphRef = useRef<{ fit: () => void } | null>(null);
 
@@ -101,6 +103,7 @@ export function Dashboard() {
           setSearchQuery('');
           setIsArchitectureOpen(false);
           setIsVivaOpen(false);
+          setIsNetworkManagerOpen(false);
           if (autoDemo.isActive) autoDemo.stopAutoDemo();
           break;
         case '/':
@@ -137,6 +140,7 @@ export function Dashboard() {
         status={state.status} 
         onOpenArchitecture={() => setIsArchitectureOpen(true)}
         onOpenViva={() => setIsVivaOpen(true)}
+        onOpenNetworkManagers={() => setIsNetworkManagerOpen(true)}
         onTogglePhone={() => setIsPhoneOpen(prev => !prev)}
         isPhoneOpen={isPhoneOpen}
         isAutoDemoActive={autoDemo.isActive}
@@ -155,6 +159,7 @@ export function Dashboard() {
           onResume={resume}
           onReset={reset}
           onStepNext={stepNext}
+          onOpenNetworkManagers={() => setIsNetworkManagerOpen(true)}
           searchQuery={searchQuery}
           onSearch={setSearchQuery}
         />
@@ -239,6 +244,19 @@ export function Dashboard() {
       <VivaGuideModal
         isOpen={isVivaOpen}
         onClose={() => setIsVivaOpen(false)}
+      />
+
+      {/* Influencer & Connected Network Manager Activity Hub */}
+      <NetworkManagerHub
+        isOpen={isNetworkManagerOpen}
+        onClose={() => setIsNetworkManagerOpen(false)}
+        users={users}
+        edges={edges}
+        nodeStates={state.nodeStates}
+        notifications={state.notifications}
+        onSelectUser={(id) => setSelectedUserId(id)}
+        onTriggerReaction={triggerUserReaction}
+        onSetAsActor={handleSetAsActor}
       />
     </div>
   );
