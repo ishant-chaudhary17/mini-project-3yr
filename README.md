@@ -4,6 +4,19 @@
 
 ---
 
+## 🌐 Quick Access & Localhost URLs
+
+When running locally, access the components at the following URLs:
+
+| Component | Localhost Link | Default Port | Description |
+|---|---|---|---|
+| 🖥️ **Frontend Visualizer Web App** | [**http://localhost:5173**](http://localhost:5173) | `5173` | Interactive SVG graph, Auto-Demo, Mobile Lockscreen & Reaction cascades |
+| ⚙️ **Backend REST API** | [**http://localhost:5000**](http://localhost:5000) | `5000` | Express API for graph topology, users, edges, and BFS simulation |
+| 📊 **Graph Data Endpoint** | [**http://localhost:5000/api/graph**](http://localhost:5000/api/graph) | `5000` | Returns full graph (50 users, 86 edges, network stats) |
+| 🔍 **BFS Simulation Test Endpoint** | [**http://localhost:5000/api/simulate?actorId=u00&action=POST&strategy=bfs**](http://localhost:5000/api/simulate?actorId=u00&action=POST&strategy=bfs) | `5000` | Run BFS fan-out simulation directly via REST query |
+
+---
+
 ## 🗂 Project Structure
 
 ```
