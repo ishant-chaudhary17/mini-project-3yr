@@ -51,7 +51,22 @@ npm install
 npm run dev
 ```
 
-Opens at → **http://localhost:5173**
+Opens at → **http://localhost:5173**  
+Network (LAN / Same Wi-Fi) → **http://172.16.202.27:5173**
+
+---
+
+## 🌍 Free 1-Click Cloud Deployment (Vercel)
+
+To make this project permanently accessible online 24/7 from any device or internet connection:
+
+1. Go to [**Vercel**](https://vercel.com/signup) and sign up with your GitHub account (**ishant-chaudhary17**).
+2. Click **"Add New... ➔ Project"**.
+3. Import this repository: `ishant-chaudhary17/mini-project-3yr`.
+4. Click **"Deploy"** (Vercel automatically detects the Vite configuration).
+5. In ~45 seconds, you will receive a live public URL: `https://mini-project-3yr.vercel.app`!
+
+---
 
 ### Backend (Express API)
 
